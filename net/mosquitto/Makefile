@@ -191,6 +191,7 @@ Package/mosquitto-client-nossl/install = $(Package/mosquitto-client-ssl/install)
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include
 	$(CP) $(PKG_BUILD_DIR)/lib/mosquitto.h $(1)/usr/include
+	$(CP) $(PKG_BUILD_DIR)/lib/mqtt_protocol.h $(1)/usr/include
 	$(CP) $(PKG_BUILD_DIR)/lib/cpp/mosquittopp.h $(1)/usr/include
 	$(CP) $(PKG_BUILD_DIR)/src/mosquitto_plugin.h $(1)/usr/include
 	$(CP) $(PKG_BUILD_DIR)/src/mosquitto_broker.h $(1)/usr/include
